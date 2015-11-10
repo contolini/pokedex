@@ -1,7 +1,9 @@
 var path = require('path');
 var gulp = require('gulp');
-var eslint = require('gulp-eslint');
-var excludeGitignore = require('gulp-exclude-gitignore');
+var fs = require('fs');
+var browserify = require('browserify');
+var es6ify = require('es6ify');
+var brfs = require('brfs');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var nsp = require('gulp-nsp');
@@ -14,12 +16,17 @@ var isparta = require('isparta');
 // when they're loaded
 require('babel-core/register');
 
-gulp.task('static', function () {
-  return gulp.src('**/*.js')
-    .pipe(excludeGitignore())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+
+// TODO: Browserify doesn't play nice with ES6 :(
+// https://github.com/substack/brfs/issues/39
+gulp.task('scripts', ['babel'], function () {
+  browserify({ debug: true })
+    .add(es6ify.runtime)
+    .transform(es6ify)
+    .transform(brfs)
+    .require(require.resolve('./lib/index.js'), { entry: true })
+    .bundle()
+    .pipe(fs.createWriteStream('./dist/browser.js'));
 });
 
 gulp.task('nsp', function (cb) {
@@ -60,5 +67,5 @@ gulp.task('clean', function () {
   return del('dist');
 });
 
-gulp.task('prepublish', ['nsp', 'babel']);
+gulp.task('prepublish', ['nsp', 'scripts']);
 gulp.task('default', ['test']);

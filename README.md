@@ -1,5 +1,8 @@
 # pokedex [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> JavaScript encyclopedia of Pokemon. With sprites.
+
+JavaScript encyclopedia of Pokemon with sprites.
+
+![Jigglypuff](http://img.pokemondb.net/sprites/black-white/anim/normal/jigglypuff.gif) ![Gengar](http://img.pokemondb.net/sprites/black-white/anim/normal/gengar.gif) ![Electrode](http://img.pokemondb.net/sprites/black-white/anim/normal/electrode.gif) ![Eevee](http://img.pokemondb.net/sprites/black-white/anim/normal/eevee.gif) ![Snorlax](http://img.pokemondb.net/sprites/black-white/anim/normal/snorlax.gif)
 
 ## Installation
 
