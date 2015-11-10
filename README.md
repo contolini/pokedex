@@ -10,9 +10,10 @@ $ npm install --save pokedex
 ## Usage
 
 ```js
-var pokedex = require('pokedex');
+var Pokedex = require('pokedex'),
+    pokedex = new Pokedex();
 
-pokedex('Rainbow');
+pokedex.pokemon('bulbasaur', console.log);
 ```
 ## License
 

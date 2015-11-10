@@ -1,6 +1,6 @@
 {
   "name": "pokedex",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "JavaScript encyclopedia of Pokemon.",
   "homepage": "http://github.com/contolini/pokedex",
   "author": {
@@ -32,7 +32,7 @@
     "isparta": "^3.0.3"
   },
   "scripts": {
-    "prepublish": "gulp prepublish",
+    "prepublish": "gulp prepublish && node lib/parseData.js",
     "test": "gulp"
   },
   "license": "MIT",
