@@ -17,7 +17,7 @@ console.log( pokedex.pokemon('garbodor') );
 console.log( pokedex.pokemon('shellder') );
 ```
 
-```json
+```js
 {
   id: 569,
   species_id: 569,
