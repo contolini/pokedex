@@ -35,5 +35,8 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "csvtojson": "^0.4.5"
+  }
 }
