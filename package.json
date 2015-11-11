@@ -37,7 +37,7 @@
   },
   "scripts": {
     "prepublish": "gulp prepublish && node lib/parseData.js",
-    "test": "gulp"
+    "test": "gulp test"
   },
   "license": "MIT",
   "dependencies": {

@@ -18,6 +18,7 @@ require('babel-core/register');
 
 
 // TODO: Browserify doesn't play nice with ES6 :(
+// This module won't work in browsers until a workaround is found.
 // https://github.com/substack/brfs/issues/39
 gulp.task('scripts', ['babel'], function () {
   browserify({ debug: true })

@@ -17,7 +17,7 @@ var Pokedex = require('pokedex'),
     pokedex = new Pokedex();
 
 console.log( pokedex.pokemon('garbodor') );
-console.log( pokedex.pokemon('shellder') );
+console.log( pokedex.pokemon(90) );
 ```
 
 ```js
@@ -31,7 +31,7 @@ console.log( pokedex.pokemon('shellder') );
   is_default: 1,
   name: 'garbodor',
   sprites: {
-    normal: 'http://img.pokemondb.net/sprites/black-white/anim/normal/garbodor.png',
+    normal: 'http://img.pokemondb.net/sprites/black-white/normal/garbodor.png',
     animated: 'http://img.pokemondb.net/sprites/black-white/anim/normal/garbodor.gif'
   }
 }
@@ -45,7 +45,7 @@ console.log( pokedex.pokemon('shellder') );
   is_default: 1,
   name: 'shellder',
   sprites: {
-    normal: 'http://img.pokemondb.net/sprites/black-white/anim/normal/shellder.png',
+    normal: 'http://img.pokemondb.net/sprites/black-white/normal/shellder.png',
     animated: 'http://img.pokemondb.net/sprites/black-white/anim/normal/shellder.gif'
   }
 }
@@ -54,6 +54,8 @@ console.log( pokedex.pokemon('shellder') );
 ## License
 
 MIT © [Chris Contolini](http://contolini.com)
+
+Pokemon data from [Pokeapi](http://pokeapi.co/) BSD © [Paul Hallett](http://phalt.co/)
 
 
 [npm-image]: https://badge.fury.io/js/pokedex.svg
