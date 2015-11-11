@@ -1,5 +1,5 @@
 import assert from 'assert';
-import Pokedex from '../lib';
+import Pokedex from '../dist';
 const pokedex = new Pokedex();
 
 describe('pokedex', function () {

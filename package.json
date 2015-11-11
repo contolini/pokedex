@@ -36,6 +36,7 @@
     "isparta": "^3.0.3"
   },
   "scripts": {
+    "pretest": "gulp prepublish && node lib/parseData.js",
     "prepublish": "gulp prepublish && node lib/parseData.js",
     "test": "gulp test"
   },
