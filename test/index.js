@@ -1,5 +1,5 @@
-import assert from 'assert';
-import Pokedex from '../dist';
+const assert = require('assert');
+const Pokedex = require('../lib/index.js');
 const pokedex = new Pokedex();
 
 describe('pokedex', function () {
@@ -12,5 +12,9 @@ describe('pokedex', function () {
     assert(pokedex.pokemon(1).weight === 69, 'check bulbasaur\'s weight.');
     assert(pokedex.pokemon(14).order === 18, 'check kakuna\'s order.');
     assert(pokedex.pokemon(153).base_experience === 142, 'check bayleef\'s base experience.');
+  });
+  it('should have gen vii pokemon', function () {
+    assert(pokedex.pokemon('xurkitree').id === 796, 'check xurkitree\'s id.');
+    assert(pokedex.pokemon(799).name === 'guzzlord', 'check guzzlord\'s name');
   });
 });

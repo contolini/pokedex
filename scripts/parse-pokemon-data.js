@@ -8,7 +8,7 @@ var pokemonNames = {},
     pokemonIds = {};
 
 convertNames.on('end_parsed', function () {
-  fs.writeFile('./dist/pokemon-by-name.json', JSON.stringify(pokemonNames));
+  fs.writeFile('./lib/pokemon-by-name.json', JSON.stringify(pokemonNames));
 });
 
 convertNames.on('record_parsed', function (resultRow) {
@@ -29,7 +29,7 @@ convertNames.on('record_parsed', function (resultRow) {
 });
 
 convertIds.on('end_parsed', function () {
-  fs.writeFile('./dist/pokemon-by-id.json', JSON.stringify(pokemonIds));
+  fs.writeFile('./lib/pokemon-by-id.json', JSON.stringify(pokemonIds));
 });
 
 convertIds.on('record_parsed', function (resultRow) {
