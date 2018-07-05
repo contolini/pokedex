@@ -4,17 +4,19 @@ const pokedex = new Pokedex();
 
 describe('pokedex', function () {
   it('should query pokemon by name', function () {
-    assert(pokedex.pokemon('bulbasaur').weight === 69, 'check bulbasaur\'s weight.');
-    assert(pokedex.pokemon('kakuna').order === 18, 'check kakuna\'s order.');
-    assert(pokedex.pokemon('bayleef').base_experience === 142, 'check bayleef\'s base experience.');
+    assert.equal(pokedex.pokemon('garbodor').id, 569);
+    assert.equal(pokedex.pokemon('bulbasaur').weight, 69);
+    assert.equal(pokedex.pokemon('kakuna').order, 18);
+    assert.equal(pokedex.pokemon('bayleef').base_experience, 142);
   });
   it('should query pokemon by id', function () {
-    assert(pokedex.pokemon(1).weight === 69, 'check bulbasaur\'s weight.');
-    assert(pokedex.pokemon(14).order === 18, 'check kakuna\'s order.');
-    assert(pokedex.pokemon(153).base_experience === 142, 'check bayleef\'s base experience.');
+    assert.equal(pokedex.pokemon(90).name, 'shellder');
+    assert.equal(pokedex.pokemon(1).weight, 69);
+    assert.equal(pokedex.pokemon(14).order, 18);
+    assert.equal(pokedex.pokemon(153).base_experience, 142);
   });
   it('should have gen vii pokemon', function () {
-    assert(pokedex.pokemon('xurkitree').id === 796, 'check xurkitree\'s id.');
-    assert(pokedex.pokemon(799).name === 'guzzlord', 'check guzzlord\'s name');
+    assert.equal(pokedex.pokemon('blacephalon').id, 806);
+    assert.equal(pokedex.pokemon(805).name, 'stakataka');
   });
 });
