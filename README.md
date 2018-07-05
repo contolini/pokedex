@@ -1,4 +1,4 @@
-# pokedex [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# pokedex [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![codecov][codecov-image]][codecov-url]
 
 JavaScript encyclopedia of Pokemon with sprites.
 
@@ -66,3 +66,5 @@ Pokemon data from [Pokeapi](http://pokeapi.co/) BSD © [Paul Hallett](http://pha
 [travis-url]: https://travis-ci.org/contolini/pokedex
 [daviddm-image]: https://david-dm.org/contolini/pokedex.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/contolini/pokedex
+[codecov-image]: https://codecov.io/gh/contolini/pokedex/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/contolini/pokedex

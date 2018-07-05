@@ -15,13 +15,15 @@
   ],
   "repository": "contolini/pokedex",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "codecov": "istanbul cover node_modules/.bin/_mocha test && codecov"
   },
   "license": "MIT",
   "dependencies": {
     "csvtojson": "^0.4.5"
   },
   "devDependencies": {
+    "codecov": "^3.0.2",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0"
   }
