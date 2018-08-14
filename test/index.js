@@ -3,6 +3,9 @@ const Pokedex = require('../lib/index.js');
 const pokedex = new Pokedex();
 
 describe('pokedex', function () {
+  it('should query all pokemon', function() {
+    assert.notEqual(pokedex.pokemon().length, 0);
+  });
   it('should query pokemon by name', function () {
     assert.equal(pokedex.pokemon('garbodor').id, 569);
     assert.equal(pokedex.pokemon('bulbasaur').weight, 69);
