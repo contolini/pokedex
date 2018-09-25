@@ -16,7 +16,8 @@
   "repository": "contolini/pokedex",
   "scripts": {
     "test": "mocha test",
-    "codecov": "istanbul cover node_modules/.bin/_mocha test && codecov"
+    "codecov": "istanbul cover node_modules/.bin/_mocha test && codecov",
+    "parse": "node scripts/parse-pokemon-data.js"
   },
   "license": "MIT",
   "dependencies": {

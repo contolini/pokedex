@@ -53,6 +53,10 @@ console.log( pokedex.pokemon(90) );
 }
 ```
 
+## Contributing
+
+Run `npm run parse` to convert the CSVs in `/data` into the JSON file consumed by this library.
+
 ## License
 
 MIT © [Chris Contolini](http://contolini.com)
